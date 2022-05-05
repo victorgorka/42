@@ -6,7 +6,7 @@
 /*   By: vde-prad <vde-prad@student.42malaga.com>   +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/04/26 13:28:32 by vde-prad          #+#    #+#             */
-/*   Updated: 2022/05/04 14:26:47 by vde-prad         ###   ########.fr       */
+/*   Updated: 2022/05/05 11:16:46 by vde-prad         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -89,4 +89,16 @@ void	*ft_calloc(size_t count, size_t size);
 //allocates enough space for count objects that are size
 //bytes of memory each and returns a pointer to the allocated memory.
 //The allocated memory is filled with bytes of value zero.
+
+char	*ft_strdup(const char *s1);
+//allocates sufficient memory for a copy of the string s1, 
+//does the copy, and returns a pointer to it
+
+char	*ft_substr(char const *s, unsigned int start, size_t len);
+/*
+Reserva (con malloc(3)) y devuelve una substring de
+la string ’s’.
+La substring empieza desde el índice ’start’ y
+tiene una longitud máxima ’len’.
+*/
 #endif
