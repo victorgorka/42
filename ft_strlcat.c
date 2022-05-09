@@ -6,7 +6,7 @@
 /*   By: vde-prad <vde-prad@student.42malaga.com>   +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/04/28 15:28:17 by vde-prad          #+#    #+#             */
-/*   Updated: 2022/04/29 13:39:46 by vde-prad         ###   ########.fr       */
+/*   Updated: 2022/05/09 11:15:50 by vde-prad         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 #include "libft.h"
@@ -33,13 +33,13 @@ size_t	ft_strlcat(char *dst, const char *src, size_t dstsize)
 #include<string.h>
 int	main(void)
 {
-	char	dst1[0xF00] = "there is no stars in the sky";
-	char	src1[] = "the cake is a lie !\0I'm hidden lol\r\n";
-	char	dst2[0xF00] = "there is no stars in the sky";
-	char	src2[] = "the cake is a lie !\0I'm hidden lol\r\n";
-	size_t max = strlen("the cake is a lie !\0I'm hidden lol\r\n") + 4;
-	printf("%lu\n",strlcat(dst1, src1, max));
-	printf("%zu\n",ft_strlcat(dst2, src2, max));
+	char	dst1[10] = "a";
+	//char	src1[] = "the cake is a lie !\0I'm hidden lol\r\n";
+	char	dst2[10] = "a";
+	//char	src2[] = "the cake is a lie !\0I'm hidden lol\r\n";
+	//size_t max = strlen("the cake is a lie !\0I'm hidden lol\r\n") + 4;
+	printf("%lu\n",strlcat(dst1, "lorem ipsum dolor sit amet", 6));
+	printf("%zu\n",ft_strlcat(dst2, "lorem ipsum dolor sit amet", 6));
 	puts(dst1);
 	printf("%s", dst2);
 }

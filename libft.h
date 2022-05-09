@@ -6,7 +6,7 @@
 /*   By: vde-prad <vde-prad@student.42malaga.com>   +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/04/26 13:28:32 by vde-prad          #+#    #+#             */
-/*   Updated: 2022/05/05 11:16:46 by vde-prad         ###   ########.fr       */
+/*   Updated: 2022/05/05 13:21:45 by vde-prad         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -100,5 +100,15 @@ Reserva (con malloc(3)) y devuelve una substring de
 la string ’s’.
 La substring empieza desde el índice ’start’ y
 tiene una longitud máxima ’len’.
+*/
+
+char	*ft_strjoin(char const *s1, char const *s2);
+/*
+Reserva (con malloc(3)) y devuelve una nueva
+string, formada por la concatenación de ’s1’ y
+’s2’.
+
+Valor devuelto: La nueva string.
+NULL si falla la reserva de memoria.
 */
 #endif

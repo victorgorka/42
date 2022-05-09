@@ -6,7 +6,7 @@
 /*   By: vde-prad <vde-prad@student.42malaga.com>   +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/05/04 16:38:25 by vde-prad          #+#    #+#             */
-/*   Updated: 2022/05/05 12:49:48 by vde-prad         ###   ########.fr       */
+/*   Updated: 2022/05/06 13:57:35 by vde-prad         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -17,6 +17,8 @@ char	*ft_substr(char const *s, unsigned int start, size_t len)
 	char	*sub;
 	char	*aux;
 
+	if (s == 0)
+		return (0);
 	if (start >= ft_strlen(s))
 	{
 		sub = ft_calloc(1, 1);
