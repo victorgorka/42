@@ -6,14 +6,16 @@
 /*   By: vde-prad <vde-prad@student.42malaga.com>   +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/04/29 14:59:17 by vde-prad          #+#    #+#             */
-/*   Updated: 2022/05/09 12:03:02 by vde-prad         ###   ########.fr       */
+/*   Updated: 2022/05/09 15:44:09 by vde-prad         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 char	*ft_strchr(const char *s, int c)
 {
-	if (*s == 0)
-		return ((char *)s);
+	if (*s == 0 && c != 0)
+		return (0);
+	else if (*s == 0 && c == 0)
+		return ("");
 	while (*s != 0)
 	{
 		if (*s == (unsigned char)c)
@@ -29,7 +31,8 @@ char	*ft_strchr(const char *s, int c)
 #include<string.h>
 int main(void)
 {
-	char s[] = "tripouille";
-	puts(ft_strchr(s, 't' + 256));
+	char s[] = "";
+	puts(strchr(s, '\0'));
+	puts(ft_strchr(s, '\0'));
 }
 */
