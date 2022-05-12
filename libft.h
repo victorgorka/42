@@ -6,7 +6,7 @@
 /*   By: vde-prad <vde-prad@student.42malaga.com>   +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/04/26 13:28:32 by vde-prad          #+#    #+#             */
-/*   Updated: 2022/05/05 13:21:45 by vde-prad         ###   ########.fr       */
+/*   Updated: 2022/05/12 12:41:43 by vde-prad         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -111,4 +111,6 @@ string, formada por la concatenación de ’s1’ y
 Valor devuelto: La nueva string.
 NULL si falla la reserva de memoria.
 */
+
+char	*ft_strtrim(char const *s1, char const *set);
 #endif
