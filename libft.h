@@ -6,7 +6,7 @@
 /*   By: vde-prad <vde-prad@student.42malaga.com>   +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/04/26 13:28:32 by vde-prad          #+#    #+#             */
-/*   Updated: 2022/05/12 12:41:43 by vde-prad         ###   ########.fr       */
+/*   Updated: 2022/05/13 17:08:28 by vde-prad         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -113,4 +113,15 @@ NULL si falla la reserva de memoria.
 */
 
 char	*ft_strtrim(char const *s1, char const *set);
+//Elimina todos los caracteres de la string ’set’
+//desde el principio y desde el final de ’s1’, hasta
+//encontrar un caracter no perteneciente a ’set’. La
+//string resultante se devuelve con una reserva de
+//malloc(3)
+
+char	**ft_split(char const *s, char c);
+//Reserva (utilizando malloc(3)) un array de strings
+//resultante de separar la string ’s’ en substrings
+//utilizando el caracter ’c’ como delimitador. El
+//array debe terminar con un puntero NULL.
 #endif
