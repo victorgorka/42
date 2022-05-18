@@ -6,7 +6,7 @@
 /*   By: vde-prad <vde-prad@student.42malaga.com>   +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/05/12 16:45:28 by vde-prad          #+#    #+#             */
-/*   Updated: 2022/05/18 16:19:33 by vde-prad         ###   ########.fr       */
+/*   Updated: 2022/05/18 18:08:55 by vde-prad         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 #include<stdlib.h>
@@ -33,22 +33,40 @@ static unsigned int	ft_nstrings(char const *s, char c)
 	}
 	return (res);
 }
-
-char	**ft_split(char const *s, char c)
+char	**ft_settab(char const *s, char const *cpy, char **tab)
 {
-	char 			**tab;
-	char			**start;
 	unsigned int	i;
-	char			*cpy;
+	unsigned int	tabindex;
 	unsigned int	aux;
 
 	aux = 0;
+	tabindex = 0;
+	i = 0;
+	while (i < ft_strlen(s))
+	{
+		if(cpy[i] != '\0' && aux == 0 )
+		{
+			tab[tabindex] = ft_strdup(&cpy[i]);
+			aux = 1;
+			tabindex++;
+		}
+		else if (cpy[i] == '\0')
+			aux = 0;
+		i++;
+	}
+	return (tab);
+}
+char	**ft_split(char const *s, char c)
+{
+	char 			**tab;
+	unsigned int	i;
+	char			*cpy;
+
 	cpy = (char *)ft_strdup(s);
 	i = 0;
 	if (!s)
 		return (0);
 	tab = (char **)malloc(ft_nstrings(s, c) * sizeof(char *));
-	start = tab;
 	if (!tab)
 		return (0);
 	while (cpy[i])
@@ -57,20 +75,7 @@ char	**ft_split(char const *s, char c)
 			cpy[i] = '\0';
 		i++;
 	}
-	i = 0;
-	while (i < ft_strlen(s))
-	{
-		if(cpy[i] != '\0' && aux == 0 )
-		{
-			*tab = ft_strdup(&cpy[i]);
-			aux = 1;
-			tab++;
-		}
-		else if (cpy[i] == '\0')
-			aux = 0;
-		i++;
-	}
-	return (start);
+	return (ft_settab(s, cpy, tab));
 }
 
 
