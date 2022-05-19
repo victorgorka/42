@@ -6,13 +6,13 @@
 /*   By: vde-prad <vde-prad@student.42malaga.com>   +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/05/12 16:45:28 by vde-prad          #+#    #+#             */
-/*   Updated: 2022/05/18 18:08:55 by vde-prad         ###   ########.fr       */
+/*   Updated: 2022/05/19 12:10:42 by vde-prad         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 #include<stdlib.h>
 #include "libft.h"
-
 #include <stdio.h>
+
 static unsigned int	ft_nstrings(char const *s, char c)
 {
 	unsigned int	res;
@@ -22,7 +22,7 @@ static unsigned int	ft_nstrings(char const *s, char c)
 	res = 0;
 	while (*s)
 	{
-		if (*s != c && sep == 0 )
+		if (*s != c && sep == 0)
 		{
 			res++;
 			sep = 1;
@@ -33,6 +33,7 @@ static unsigned int	ft_nstrings(char const *s, char c)
 	}
 	return (res);
 }
+
 char	**ft_settab(char const *s, char const *cpy, char **tab)
 {
 	unsigned int	i;
@@ -44,7 +45,7 @@ char	**ft_settab(char const *s, char const *cpy, char **tab)
 	i = 0;
 	while (i < ft_strlen(s))
 	{
-		if(cpy[i] != '\0' && aux == 0 )
+		if (cpy[i] != '\0' && aux == 0)
 		{
 			tab[tabindex] = ft_strdup(&cpy[i]);
 			aux = 1;
@@ -53,12 +54,13 @@ char	**ft_settab(char const *s, char const *cpy, char **tab)
 		else if (cpy[i] == '\0')
 			aux = 0;
 		i++;
-	}
+	}	
 	return (tab);
 }
+
 char	**ft_split(char const *s, char c)
 {
-	char 			**tab;
+	char			**tab;
 	unsigned int	i;
 	char			*cpy;
 
@@ -66,7 +68,7 @@ char	**ft_split(char const *s, char c)
 	i = 0;
 	if (!s)
 		return (0);
-	tab = (char **)malloc(ft_nstrings(s, c) * sizeof(char *));
+	tab = (char **)malloc((ft_nstrings(s, c) + 1) * sizeof(char *));
 	if (!tab)
 		return (0);
 	while (cpy[i])
@@ -75,21 +77,19 @@ char	**ft_split(char const *s, char c)
 			cpy[i] = '\0';
 		i++;
 	}
-	return (ft_settab(s, cpy, tab));
+	tab = ft_settab(s, cpy, tab);
+	tab[ft_nstrings(s, c)] = NULL;
+	return (tab);
 }
-
-
 /*
 int	main(void)
 {
-	char	*s = "      split       this for   me  !       ";
-	char	**ret = ft_split(s, ' ');
-//	printf("%d", ft_nstrings(s, ' '));
+	//char	*s = "      split       this for   me  !       ";
+	char	**ret = ft_split("  tripouille  42  ", ' ');
+	//	printf("%d", ft_nstrings(s, ' '));
 	printf("%s\n", ret[0]);
 	printf("%s\n", ret[1]);
-	printf("%s\n", ret[2]);	
-	printf("%s\n", ret[3]);
-	printf("%s\n", ret[4]);
+	printf("%s\n", ret[2]);
 	free(ret);
 }
 */
