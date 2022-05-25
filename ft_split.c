@@ -6,7 +6,7 @@
 /*   By: vde-prad <vde-prad@student.42malaga.com>   +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/05/12 16:45:28 by vde-prad          #+#    #+#             */
-/*   Updated: 2022/05/19 12:10:42 by vde-prad         ###   ########.fr       */
+/*   Updated: 2022/05/25 13:10:36 by vde-prad         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 #include<stdlib.h>
@@ -79,6 +79,7 @@ char	**ft_split(char const *s, char c)
 	}
 	tab = ft_settab(s, cpy, tab);
 	tab[ft_nstrings(s, c)] = NULL;
+	free(cpy);
 	return (tab);
 }
 /*

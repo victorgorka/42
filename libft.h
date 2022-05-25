@@ -6,7 +6,7 @@
 /*   By: vde-prad <vde-prad@student.42malaga.com>   +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/04/26 13:28:32 by vde-prad          #+#    #+#             */
-/*   Updated: 2022/05/13 17:08:28 by vde-prad         ###   ########.fr       */
+/*   Updated: 2022/05/25 13:47:00 by vde-prad         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -124,4 +124,9 @@ char	**ft_split(char const *s, char c);
 //resultante de separar la string ’s’ en substrings
 //utilizando el caracter ’c’ como delimitador. El
 //array debe terminar con un puntero NULL.
+
+char	*ft_itoa(int n);
+//Utilizando malloc(3), genera una string que
+//represente el valor entero recibido como argumento.
+//Los números negativos tienen que gestionarse.
 #endif

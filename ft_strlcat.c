@@ -6,7 +6,7 @@
 /*   By: vde-prad <vde-prad@student.42malaga.com>   +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/04/28 15:28:17 by vde-prad          #+#    #+#             */
-/*   Updated: 2022/05/09 11:15:50 by vde-prad         ###   ########.fr       */
+/*   Updated: 2022/05/25 13:45:08 by vde-prad         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 #include "libft.h"
@@ -29,6 +29,7 @@ size_t	ft_strlcat(char *dst, const char *src, size_t dstsize)
 	return (final_size);
 }
 /*
+#include<unistd.h>
 #include<stdio.h>
 #include<string.h>
 int	main(void)
@@ -41,6 +42,9 @@ int	main(void)
 	printf("%lu\n",strlcat(dst1, "lorem ipsum dolor sit amet", 6));
 	printf("%zu\n",ft_strlcat(dst2, "lorem ipsum dolor sit amet", 6));
 	puts(dst1);
-	printf("%s", dst2);
+	printf("%s\n", dst2);
+	write(1, dst1, 15);
+	write(1, "\n", 1);
+	write(1, dst2, 30);
 }
 */
