@@ -6,7 +6,7 @@
 /*   By: vde-prad <vde-prad@student.42malaga.com>   +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/04/26 13:28:32 by vde-prad          #+#    #+#             */
-/*   Updated: 2022/05/25 13:47:00 by vde-prad         ###   ########.fr       */
+/*   Updated: 2022/05/26 19:59:12 by vde-prad         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -129,4 +129,11 @@ char	*ft_itoa(int n);
 //Utilizando malloc(3), genera una string que
 //represente el valor entero recibido como argumento.
 //Los números negativos tienen que gestionarse.
+
+char	*ft_strmapi(char const *s, char (*f)(unsigned int, char));
+//A cada carácter de la string ’s’, aplica la
+//función ’f’ dando como parámetros el índice de cada
+//carácter dentro de ’s’ y el propio carácter. Genera
+//una nueva string con el resultado del uso sucesivo
+//de ’f
 #endif
