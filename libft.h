@@ -6,7 +6,7 @@
 /*   By: vde-prad <vde-prad@student.42malaga.com>   +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/04/26 13:28:32 by vde-prad          #+#    #+#             */
-/*   Updated: 2022/05/26 19:59:12 by vde-prad         ###   ########.fr       */
+/*   Updated: 2022/05/27 12:10:05 by vde-prad         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -136,4 +136,10 @@ char	*ft_strmapi(char const *s, char (*f)(unsigned int, char));
 //carácter dentro de ’s’ y el propio carácter. Genera
 //una nueva string con el resultado del uso sucesivo
 //de ’f
+
+void	ft_striteri(char *s, void (*f)(unsigned int, char*));
+//A cada carácter de la string ’s’, aplica la función
+//’f’ dando como parámetros el índice de cada
+//carácter dentro de ’s’ y la dirección del propio
+//carácter, que podrá modificarse si es necesario.
 #endif
