@@ -6,14 +6,14 @@
 /*   By: vde-prad <vde-prad@student.42malaga.com>   +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/04/26 13:28:32 by vde-prad          #+#    #+#             */
-/*   Updated: 2022/05/27 12:10:05 by vde-prad         ###   ########.fr       */
+/*   Updated: 2022/05/27 12:34:55 by vde-prad         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #ifndef LIBFT_H
 # define LIBFT_H
 //*******************STANDARD LIBRARIES*************************************
-
+# include <unistd.h>
 # include <stddef.h>
 # include <stdlib.h>
 //************************FUNCTIONS******************************************
@@ -142,4 +142,8 @@ void	ft_striteri(char *s, void (*f)(unsigned int, char*));
 //’f’ dando como parámetros el índice de cada
 //carácter dentro de ’s’ y la dirección del propio
 //carácter, que podrá modificarse si es necesario.
+
+void	ft_putchar_fd(char c, int fd);
+//Envía el carácter ’c’ al file descriptor
+//especificado.
 #endif
