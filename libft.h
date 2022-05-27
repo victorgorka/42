@@ -6,7 +6,7 @@
 /*   By: vde-prad <vde-prad@student.42malaga.com>   +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/04/26 13:28:32 by vde-prad          #+#    #+#             */
-/*   Updated: 2022/05/27 12:58:26 by vde-prad         ###   ########.fr       */
+/*   Updated: 2022/05/27 13:27:06 by vde-prad         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -150,4 +150,11 @@ void	ft_putchar_fd(char c, int fd);
 void	ft_putstr_fd(char *s, int fd);
 //Envía la string ’s’ al file descriptor
 //especificado.
+
+void	ft_putendl_fd(char *s, int fd);
+//Envía la string ’s’ al file descriptor dado,
+//seguido de un salto de línea.
+
+void	ft_putnbr_fd(int n, int fd);
+////Envía el número ’n’ al file descriptor dado.
 #endif
