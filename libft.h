@@ -6,7 +6,7 @@
 /*   By: vde-prad <vde-prad@student.42malaga.com>   +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/04/26 13:28:32 by vde-prad          #+#    #+#             */
-/*   Updated: 2022/05/27 13:27:06 by vde-prad         ###   ########.fr       */
+/*   Updated: 2022/05/27 14:09:18 by vde-prad         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -82,7 +82,7 @@ char	*ft_strnstr(const char *haystack, const char *needle, size_t len);
 // in the string haystack
 
 int		ft_atoi(const char *str);
-//onverts the initial portion of the string pointed to by
+//converts the initial portion of the string pointed to by
 //str to int representation.
 
 void	*ft_calloc(size_t count, size_t size);
