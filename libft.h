@@ -6,7 +6,7 @@
 /*   By: vde-prad <vde-prad@student.42malaga.com>   +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/04/26 13:28:32 by vde-prad          #+#    #+#             */
-/*   Updated: 2022/05/27 12:34:55 by vde-prad         ###   ########.fr       */
+/*   Updated: 2022/05/27 12:58:26 by vde-prad         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -145,5 +145,9 @@ void	ft_striteri(char *s, void (*f)(unsigned int, char*));
 
 void	ft_putchar_fd(char c, int fd);
 //Envía el carácter ’c’ al file descriptor
+//especificado.
+
+void	ft_putstr_fd(char *s, int fd);
+//Envía la string ’s’ al file descriptor
 //especificado.
 #endif
