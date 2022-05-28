@@ -11,28 +11,29 @@
 /* ************************************************************************** */
 #include "libft.h"
 
-void ft_putnbr_fd(int n, int fd)
+void	ft_putnbr_fd(int n, int fd)
 {
-	char			*aux;
-	char			*res;
-	long			num;
-	unsigned int	i;
+	long	numb;
 
-	i = 0;
-	num = n;
-	if (num < 0)
+	numb = n;
+	if (n < 0)
 	{
 		ft_putchar_fd('-', fd);
-		num *= -1;
+		numb *= -1;
 	}
-	if (num == 0)
+	if (numb <= 9)
 	{
-		ft_putchar_fd('0');
-		break;
+		ft_putchar_fd((numb + '0'), fd);
 	}
-	while (num != 0)
+	else
 	{
-		*aux
+		ft_putnbr_fd((numb / 10), fd);
+		ft_putchar_fd((numb % 10) + '0', fd);
 	}
 }
-
+/*
+int main()
+{
+	ft_putnbr_fd(-2147483648, 1);
+}
+*/
