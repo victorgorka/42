@@ -6,7 +6,7 @@
 /*   By: vde-prad <vde-prad@student.42malaga.com>   +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/04/26 13:28:32 by vde-prad          #+#    #+#             */
-/*   Updated: 2022/05/30 14:40:11 by vde-prad         ###   ########.fr       */
+/*   Updated: 2022/05/30 17:23:00 by vde-prad         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -156,12 +156,17 @@ void	ft_putendl_fd(char *s, int fd);
 //seguido de un salto de línea.
 
 void	ft_putnbr_fd(int n, int fd);
-////Envía el número ’n’ al file descriptor dado.
+//Envía el número ’n’ al file descriptor dado.
 
 typedef struct s_list
 {
 	void			*content;
 	struct s_list	*next;
 }	t_list;
+
 t_list	*ft_lstnew_bonus(void *content);
+//Crea un nuevo nodo utilizando malloc(3). La
+//variable miembro ’content’ se inicializa con el
+//contenido del parámetro ’content’. La variable
+//’next’, con NULL.
 #endif
