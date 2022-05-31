@@ -6,7 +6,7 @@
 /*   By: vde-prad <vde-prad@student.42malaga.com>   +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/04/26 13:28:32 by vde-prad          #+#    #+#             */
-/*   Updated: 2022/05/30 17:23:00 by vde-prad         ###   ########.fr       */
+/*   Updated: 2022/05/31 12:40:19 by vde-prad         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -164,9 +164,12 @@ typedef struct s_list
 	struct s_list	*next;
 }	t_list;
 
-t_list	*ft_lstnew_bonus(void *content);
+t_list	*ft_lstnew(void *content);
 //Crea un nuevo nodo utilizando malloc(3). La
 //variable miembro ’content’ se inicializa con el
 //contenido del parámetro ’content’. La variable
 //’next’, con NULL.
+
+void	ft_lstadd_front(t_list **lst, t_list *new);
+//Añade el nodo ’new’ al principio de la lista ’lst’.
 #endif
