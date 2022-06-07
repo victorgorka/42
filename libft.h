@@ -6,7 +6,7 @@
 /*   By: vde-prad <vde-prad@student.42malaga.com>   +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/04/26 13:28:32 by vde-prad          #+#    #+#             */
-/*   Updated: 2022/06/07 17:19:14 by vde-prad         ###   ########.fr       */
+/*   Updated: 2022/06/07 17:47:56 by vde-prad         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -184,4 +184,6 @@ void	ft_lstadd_back(t_list **lst, t_list *new);
 
 void	ft_lstdelone(t_list *lst, void (*del)(void *));
 //libera contenido de nodo 'lst' y el propio nodo
+
+void	ft_lstclear(t_list **lst, void (*del)(void *));
 #endif
