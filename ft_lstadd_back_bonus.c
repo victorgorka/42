@@ -1,27 +1,25 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_lstsize.c                                       :+:      :+:    :+:   */
+/*   ft_lstadd_back_bonus.c                             :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: vde-prad <vde-prad@student.42malaga.com>   +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2022/05/31 17:24:54 by vde-prad          #+#    #+#             */
-/*   Updated: 2022/06/07 12:00:18 by vde-prad         ###   ########.fr       */
+/*   Created: 2022/06/07 13:33:42 by vde-prad          #+#    #+#             */
+/*   Updated: 2022/06/07 17:03:35 by vde-prad         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 #include "libft.h"
-//return the size of the list
-int	ft_lstsize(t_list *lst)
+//no hago new->next = 0; porque me hace segfault
+void	ft_lstadd_back(t_list **lst, t_list *new)
 {
-	size_t	i;
+	t_list	*plast;
 
-	i = 1;
-	if (lst == 0)
-		return (0);
-	while (lst->next != 0)
+	if (*lst == 0)
+		*lst = new;
+	else
 	{
-		i++;
-		lst = lst->next;
+		plast = ft_lstlast(*lst);
+		plast->next = new;
 	}
-	return (i);
 }

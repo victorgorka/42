@@ -6,7 +6,7 @@
 /*   By: vde-prad <vde-prad@student.42malaga.com>   +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/04/26 13:28:32 by vde-prad          #+#    #+#             */
-/*   Updated: 2022/05/31 12:40:19 by vde-prad         ###   ########.fr       */
+/*   Updated: 2022/06/07 17:19:14 by vde-prad         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -172,4 +172,16 @@ t_list	*ft_lstnew(void *content);
 
 void	ft_lstadd_front(t_list **lst, t_list *new);
 //Añade el nodo ’new’ al principio de la lista ’lst’.
+
+int		ft_lstsize(t_list *lst);
+//devuelve tamaño de la lista
+
+t_list	*ft_lstlast(t_list *lst);
+//devuelve ultimo nodo
+
+void	ft_lstadd_back(t_list **lst, t_list *new);
+//añade el nodo 'new' al final de la lista 'lst'
+
+void	ft_lstdelone(t_list *lst, void (*del)(void *));
+//libera contenido de nodo 'lst' y el propio nodo
 #endif
