@@ -6,7 +6,7 @@
 /*   By: vde-prad <vde-prad@student.42malaga.com>   +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/04/26 13:28:32 by vde-prad          #+#    #+#             */
-/*   Updated: 2022/06/07 17:47:56 by vde-prad         ###   ########.fr       */
+/*   Updated: 2022/06/08 13:29:16 by vde-prad         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -186,4 +186,9 @@ void	ft_lstdelone(t_list *lst, void (*del)(void *));
 //libera contenido de nodo 'lst' y el propio nodo
 
 void	ft_lstclear(t_list **lst, void (*del)(void *));
+//elimina y libera el nodo al que apunta el puntero 
+//pasado por parametro
+
+void	ft_lstiter(t_list *lst, void (*f)(void *));
+//itera la lista y aplica 'f' a cada nodo
 #endif
