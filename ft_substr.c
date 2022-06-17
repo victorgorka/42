@@ -6,7 +6,7 @@
 /*   By: vde-prad <vde-prad@student.42malaga.com>   +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/05/04 16:38:25 by vde-prad          #+#    #+#             */
-/*   Updated: 2022/05/06 13:57:35 by vde-prad         ###   ########.fr       */
+/*   Updated: 2022/06/17 16:29:08 by vde-prad         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -15,21 +15,29 @@
 char	*ft_substr(char const *s, unsigned int start, size_t len)
 {
 	char	*sub;
-	char	*aux;
+	size_t	size;
+	size_t	length;
+	size_t	i;
 
-	if (s == 0)
-		return (0);
-	if (start >= ft_strlen(s))
-	{
-		sub = ft_calloc(1, 1);
-		return (sub);
-	}
-	aux = (char *)s + start;
-	sub = malloc((len + 1) * sizeof(char));
+	i = 0;
+	length = ft_strlen(s);
+	if (start > ft_strlen(s) || !s)
+		return (ft_strdup(""));
+	if ((length - start) > len)
+		size = len + 1;
+	else
+		size = length - start + 1;
+	if (start >= length)
+		size = 1;
+	sub = malloc((size) * sizeof(char));
 	if (sub == 0)
 		return (NULL);
-	ft_memcpy(sub, aux, ft_strlen(aux));
-	sub[len] = 0;
+	while (s[start + i] && i < len && start < length)
+	{
+		sub[i] = s[start + i];
+		i++;
+	}
+	sub[i] = 0;
 	return (sub);
 }
 

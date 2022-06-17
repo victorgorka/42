@@ -6,7 +6,7 @@
 /*   By: vde-prad <vde-prad@student.42malaga.com>   +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/04/26 13:28:32 by vde-prad          #+#    #+#             */
-/*   Updated: 2022/06/13 16:49:16 by vde-prad         ###   ########.fr       */
+/*   Updated: 2022/06/17 16:03:24 by vde-prad         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -59,6 +59,8 @@ size_t	ft_strlcpy(char *dst, const char *src, size_t dstsize);
 //take the full size of the destination buffer and guarantee NUL-termination
 //copies up to dstsize - 1 characters from the string src to dst, 
 //NUL-terminating the result if dstsize is not 0.
+
+int		ft_strncmp(const char *s1, const char *s2, size_t n);
 
 size_t	ft_strlcat(char *dst, const char *src, size_t dstsize);
 //appends string src to the end of dst
