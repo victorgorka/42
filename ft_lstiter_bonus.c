@@ -6,16 +6,10 @@
 /*   By: vde-prad <vde-prad@student.42malaga.com>   +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/06/08 13:12:00 by vde-prad          #+#    #+#             */
-/*   Updated: 2022/06/13 11:37:05 by vde-prad         ###   ########.fr       */
+/*   Updated: 2022/06/17 18:37:50 by vde-prad         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 #include "libft.h"
-#include <stdio.h>
-
-void	ft_printcontent(void *lst)
-{
-	puts(lst);
-}
 
 void	ft_lstiter(t_list *lst, void (*f)(void *))
 {
