@@ -4,15 +4,15 @@ This project is focused on making our first library. I had few notions about the
 
 ### Requirements
 
-• Declaring global variables is prohibited.
-• If you need to separate a complex function into several, be sure to use the word
+- Declaring global variables is prohibited.
+- If you need to separate a complex function into several, be sure to use the word
 static for it. This way, the functions will remain in the appropriate file.
-• Put all your files in the root of your repository.
-• It is prohibited to deliver unused files.
-• All .c files must be compiled with the -Wall -Werror -Wextra flags.
-• You must use the ar command to generate the library. The use of libtool is
+- Put all your files in the root of your repository.
+- It is prohibited to deliver unused files.
+- All .c files must be compiled with the -Wall -Werror -Wextra flags.
+- You must use the ar command to generate the library. The use of libtool is
 forbidden.
-• Your libft.a has to be created in the root of the repository.
+- Your libft.a has to be created in the root of the repository.
 
 ### Functions
 
